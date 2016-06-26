@@ -1,19 +1,19 @@
 //
-//  AppDelegate.m
+//  TYAppDelegate.m
 //  TYTumblrHUD
 //
 //  Created by luckytianyiyan on 16/6/25.
 //  Copyright © 2016年 luckytianyiyan. All rights reserved.
 //
 
-#import "AppDelegate.h"
+#import "TYAppDelegate.h"
 #import "TYViewController.h"
 
-@interface AppDelegate ()
+@interface TYAppDelegate ()
 
 @end
 
-@implementation AppDelegate
+@implementation TYAppDelegate
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
