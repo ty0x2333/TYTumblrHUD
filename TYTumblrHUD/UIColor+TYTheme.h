@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  UIColor+TYTheme.h
 //  TYTumblrHUD
 //
 //  Created by luckytianyiyan on 16/6/25.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface UIColor (TYTheme)
 
++ (UIColor *)ty_background;
 
 @end
-

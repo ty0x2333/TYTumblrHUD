@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		193D0E421D1E8D02002533EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E411D1E8D02002533EB /* main.m */; };
 		193D0E451D1E8D02002533EB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E441D1E8D02002533EB /* AppDelegate.m */; };
-		193D0E481D1E8D02002533EB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E471D1E8D02002533EB /* ViewController.m */; };
-		193D0E4B1D1E8D02002533EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193D0E491D1E8D02002533EB /* Main.storyboard */; };
 		193D0E4D1D1E8D02002533EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 193D0E4C1D1E8D02002533EB /* Assets.xcassets */; };
 		193D0E501D1E8D02002533EB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193D0E4E1D1E8D02002533EB /* LaunchScreen.storyboard */; };
+		193D0E591D1E8DA8002533EB /* TYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E581D1E8DA8002533EB /* TYViewController.m */; };
+		193D0E5C1D1E8E5D002533EB /* UIColor+TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E5B1D1E8E5D002533EB /* UIColor+TYTheme.m */; };
+		193D0E601D1E93A6002533EB /* TYTumblrHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 193D0E5F1D1E93A6002533EB /* TYTumblrHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +21,15 @@
 		193D0E411D1E8D02002533EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		193D0E431D1E8D02002533EB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		193D0E441D1E8D02002533EB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		193D0E461D1E8D02002533EB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		193D0E471D1E8D02002533EB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		193D0E4A1D1E8D02002533EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		193D0E4C1D1E8D02002533EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		193D0E4F1D1E8D02002533EB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		193D0E511D1E8D02002533EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		193D0E571D1E8DA8002533EB /* TYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYViewController.h; sourceTree = "<group>"; };
+		193D0E581D1E8DA8002533EB /* TYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYViewController.m; sourceTree = "<group>"; };
+		193D0E5A1D1E8E5D002533EB /* UIColor+TYTheme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TYTheme.h"; sourceTree = "<group>"; };
+		193D0E5B1D1E8E5D002533EB /* UIColor+TYTheme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TYTheme.m"; sourceTree = "<group>"; };
+		193D0E5E1D1E93A6002533EB /* TYTumblrHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTumblrHUD.h; sourceTree = "<group>"; };
+		193D0E5F1D1E93A6002533EB /* TYTumblrHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TYTumblrHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +62,13 @@
 		193D0E3F1D1E8D02002533EB /* TYTumblrHUD */ = {
 			isa = PBXGroup;
 			children = (
+				193D0E5D1D1E9163002533EB /* TYTumblrHUD */,
 				193D0E431D1E8D02002533EB /* AppDelegate.h */,
 				193D0E441D1E8D02002533EB /* AppDelegate.m */,
-				193D0E461D1E8D02002533EB /* ViewController.h */,
-				193D0E471D1E8D02002533EB /* ViewController.m */,
-				193D0E491D1E8D02002533EB /* Main.storyboard */,
+				193D0E571D1E8DA8002533EB /* TYViewController.h */,
+				193D0E581D1E8DA8002533EB /* TYViewController.m */,
+				193D0E5A1D1E8E5D002533EB /* UIColor+TYTheme.h */,
+				193D0E5B1D1E8E5D002533EB /* UIColor+TYTheme.m */,
 				193D0E4C1D1E8D02002533EB /* Assets.xcassets */,
 				193D0E4E1D1E8D02002533EB /* LaunchScreen.storyboard */,
 				193D0E511D1E8D02002533EB /* Info.plist */,
@@ -77,6 +83,15 @@
 				193D0E411D1E8D02002533EB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		193D0E5D1D1E9163002533EB /* TYTumblrHUD */ = {
+			isa = PBXGroup;
+			children = (
+				193D0E5E1D1E93A6002533EB /* TYTumblrHUD.h */,
+				193D0E5F1D1E93A6002533EB /* TYTumblrHUD.m */,
+			);
+			path = TYTumblrHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -105,6 +120,7 @@
 		193D0E351D1E8D02002533EB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TY;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = luckytianyiyan;
 				TargetAttributes = {
@@ -138,7 +154,6 @@
 			files = (
 				193D0E501D1E8D02002533EB /* LaunchScreen.storyboard in Resources */,
 				193D0E4D1D1E8D02002533EB /* Assets.xcassets in Resources */,
-				193D0E4B1D1E8D02002533EB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +164,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				193D0E481D1E8D02002533EB /* ViewController.m in Sources */,
+				193D0E601D1E93A6002533EB /* TYTumblrHUD.m in Sources */,
+				193D0E591D1E8DA8002533EB /* TYViewController.m in Sources */,
+				193D0E5C1D1E8E5D002533EB /* UIColor+TYTheme.m in Sources */,
 				193D0E451D1E8D02002533EB /* AppDelegate.m in Sources */,
 				193D0E421D1E8D02002533EB /* main.m in Sources */,
 			);
@@ -158,14 +175,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		193D0E491D1E8D02002533EB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				193D0E4A1D1E8D02002533EB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		193D0E4E1D1E8D02002533EB /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

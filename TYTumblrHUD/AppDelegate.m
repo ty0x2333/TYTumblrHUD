@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TYViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,8 +16,20 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor ty_background]];
+//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+//    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
+//    
+//    [[UITabBar appearance] setBarTintColor:[UIColor ty_background]];
+//    [[UITabBar appearance] setTintColor:[UIColor whiteColor]];
+//
+    self.window.rootViewController = [[TYViewController alloc] init];
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
