@@ -8,7 +8,7 @@
 
 #import "TYViewController.h"
 #import "UIColor+TYTheme.h"
-#import "TYTumblrHUD.h"
+#import <TYTumblrHUD/TYTumblrHUD.h>
 
 @interface TYViewController ()
 

@@ -1,0 +1,11 @@
+platform :ios,'7.0'
+
+target 'TYTumblrHUD_Example' do
+  pod 'TYTumblrHUD', :path => '../'
+
+  target 'TYTumblrHUD_Tests' do
+    inherit! :search_paths
+
+    pod 'Kiwi'
+  end
+end

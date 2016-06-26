@@ -2,14 +2,15 @@
 //  main.m
 //  TYTumblrHUD
 //
-//  Created by luckytianyiyan on 16/6/25.
-//  Copyright © 2016年 luckytianyiyan. All rights reserved.
+//  Created by luckytianyiyan on 06/26/2016.
+//  Copyright (c) 2016 luckytianyiyan. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import UIKit;
 #import "TYAppDelegate.h"
 
-int main(int argc, char * argv[]) {
+int main(int argc, char * argv[])
+{
     @autoreleasepool {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([TYAppDelegate class]));
     }
