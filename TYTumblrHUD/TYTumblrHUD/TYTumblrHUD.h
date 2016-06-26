@@ -10,6 +10,8 @@
 
 @interface TYTumblrHUD : UIView
 
+@property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
+
 - (void)showAnimated:(BOOL)animated;
 
 - (void)hideAnimated:(BOOL)animated;

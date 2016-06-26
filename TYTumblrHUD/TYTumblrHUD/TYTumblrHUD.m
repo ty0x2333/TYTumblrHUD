@@ -115,22 +115,26 @@ static NSInteger const kSubLayerCount = 3;
 
 - (void)showAnimated:(BOOL)animated
 {
-    [self p_animateIn:YES animated:animated];
+    [self p_animateIn:YES animated:animated completion:nil];
 }
 
 - (void)hideAnimated:(BOOL)animated
 {
-    [self p_animateIn:NO animated:animated];
+    [self p_animateIn:NO animated:animated completion:^(BOOL finished) {
+        if (_removeFromSuperViewOnHide) {
+            [self removeFromSuperview];
+        }
+    }];
 }
 
 #pragma mark - Helper
 
-- (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated
+- (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated completion:(void(^)(BOOL finished))completion
 {
     if (animated) {
         [UIView animateWithDuration:kHUDAnimationDuration animations:^{
             self.alpha = animatingIn ? 1.f : 0;
-        }];
+        } completion:completion];
     } else {
         self.alpha = animatingIn ? 1.f : 0;
     }
