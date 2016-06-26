@@ -10,4 +10,6 @@
 
 @interface TYTumblrHUD : UIView
 
+- (void)showAnimated:(BOOL)animated;
+
 @end

@@ -22,6 +22,8 @@
     TYTumblrHUD *hud = [[TYTumblrHUD alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
     hud.center = self.view.center;
     [self.view addSubview:hud];
+    
+    [hud showAnimated:YES];
 }
 
 @end

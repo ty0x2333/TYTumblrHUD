@@ -18,7 +18,7 @@ static CGFloat const kSubLayerAlpha = .5f;
 static CGFloat const kSubLayerMaxDuration = .25f;
 static CGFloat const kSubLayerMinDuration = .15f;
 
-static CGFloat const kHUDAnimationDuration = .2f;
+static CGFloat const kHUDAnimationDuration = .3f;
 
 static NSInteger const kSubLayerCount = 3;
 
@@ -49,7 +49,7 @@ static NSInteger const kSubLayerCount = 3;
 - (void)commonInit
 {
     self.backgroundColor = [UIColor clearColor];
-//    self.alpha = 0;
+    self.alpha = 0;
     
     NSMutableArray *subLayers = [NSMutableArray arrayWithCapacity:kSubLayerCount];
     CGFloat offsetDuration = (kSubLayerMaxDuration - kSubLayerMinDuration) / kSubLayerCount;
@@ -110,6 +110,17 @@ static NSInteger const kSubLayerCount = 3;
     for (NSInteger i = 0; i < kSubLayerCount; ++i) {
         CALayer *subLayer = _subLayers[i];
         subLayer.frame = CGRectMake(originX + i * (kSubLayerWidth + kSubLayerInterval), 0, kSubLayerWidth, kSubLayerHeight);
+    }
+}
+
+- (void)showAnimated:(BOOL)animated
+{
+    if (animated) {
+        [UIView animateWithDuration:kHUDAnimationDuration animations:^{
+            self.alpha = 1.f;
+        }];
+    } else {
+        self.alpha = 1.f;
     }
 }
 
