@@ -19,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor ty_background];
-    TYTumblrHUD *hud = [[TYTumblrHUD alloc] initWithFrame:CGRectMake(0, 0, 10, 10)];
+    TYTumblrHUD *hud = [[TYTumblrHUD alloc] init];
     hud.center = self.view.center;
     [self.view addSubview:hud];
     
