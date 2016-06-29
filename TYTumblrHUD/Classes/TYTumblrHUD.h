@@ -12,6 +12,8 @@
 
 @property (nonatomic, assign) BOOL removeFromSuperViewOnHide;
 
++ (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
+
 - (void)showAnimated:(BOOL)animated;
 
 - (void)hideAnimated:(BOOL)animated;

@@ -128,6 +128,17 @@ static NSInteger const kSubLayerCount = 3;
     }];
 }
 
+#pragma mark - Class Methods
+
++ (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated
+{
+    TYTumblrHUD *hud = [[self alloc] initWithFrame:view.bounds];
+    hud.removeFromSuperViewOnHide = YES;
+    [view addSubview:hud];
+    [hud showAnimated:animated];
+    return hud;
+}
+
 #pragma mark - Helper
 
 - (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated completion:(void(^)(BOOL finished))completion
