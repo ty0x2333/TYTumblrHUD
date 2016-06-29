@@ -107,9 +107,10 @@ static NSInteger const kSubLayerCount = 3;
     }
     CGFloat sumOfSubLayersWidth = kSubLayerCount * kSubLayerWidth + (kSubLayerCount - 1) * kSubLayerInterval;
     CGFloat originX = (CGRectGetWidth(self.bounds) - sumOfSubLayersWidth) / 2;
+    CGFloat minY = self.center.y - kSubLayerHeight / 2;
     for (NSInteger i = 0; i < kSubLayerCount; ++i) {
         CALayer *subLayer = _subLayers[i];
-        subLayer.frame = CGRectMake(originX + i * (kSubLayerWidth + kSubLayerInterval), 0, kSubLayerWidth, kSubLayerHeight);
+        subLayer.frame = CGRectMake(originX + i * (kSubLayerWidth + kSubLayerInterval), minY, kSubLayerWidth, kSubLayerHeight);
     }
 }
 
