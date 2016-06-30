@@ -19,12 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor ty_background];
-//    TYTumblrHUD *hud = [[TYTumblrHUD alloc] init];
-//    hud.center = self.view.center;
-//    [self.view addSubview:hud];
-//    [hud showAnimated:YES];
     
-    [TYTumblrHUD showHUDAddedTo:self.view animated:YES];
+    TYTumblrHUD *hud = [TYTumblrHUD showHUDAddedTo:self.view animated:YES];
+    
+    dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+        sleep(3.f);
+        // Dispatch back to the main thread. Always access UI
+        // classes on the main thread.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [hud hideAnimated:YES];
+        });
+    });
 }
 
 @end
