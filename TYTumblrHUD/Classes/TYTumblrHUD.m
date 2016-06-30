@@ -116,11 +116,13 @@ static NSInteger const kSubLayerCount = 3;
 
 - (void)showAnimated:(BOOL)animated
 {
+    NSAssert([NSThread isMainThread], @"TYTumblrHUD needs to be accessed on the main thread.");
     [self p_animateIn:YES animated:animated completion:nil];
 }
 
 - (void)hideAnimated:(BOOL)animated
 {
+    NSAssert([NSThread isMainThread], @"TYTumblrHUD needs to be accessed on the main thread.");
     [self p_animateIn:NO animated:animated completion:^(BOOL finished) {
         if (_removeFromSuperViewOnHide) {
             [self removeFromSuperview];
