@@ -139,6 +139,28 @@ static NSInteger const kSubLayerCount = 3;
     return hud;
 }
 
++ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated
+{
+    TYTumblrHUD *hud = [self HUDForView:view];
+    if (hud != nil) {
+        hud.removeFromSuperViewOnHide = YES;
+        [hud hideAnimated:animated];
+        return YES;
+    }
+    return NO;
+}
+
++ (TYTumblrHUD *)HUDForView:(UIView *)view
+{
+    NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
+    for (UIView *subview in subviewsEnum) {
+        if ([subview isKindOfClass:self]) {
+            return (TYTumblrHUD *)subview;
+        }
+    }
+    return nil;
+}
+
 #pragma mark - Helper
 
 - (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated completion:(void(^)(BOOL finished))completion
