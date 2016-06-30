@@ -14,6 +14,10 @@
 
 + (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated;
 
++ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated;
+
++ (TYTumblrHUD *)HUDForView:(UIView *)view
+
 - (void)showAnimated:(BOOL)animated;
 
 - (void)hideAnimated:(BOOL)animated;
