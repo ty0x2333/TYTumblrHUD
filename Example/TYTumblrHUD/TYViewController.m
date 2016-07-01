@@ -29,7 +29,19 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             [hud hideAnimated:YES];
         });
+        
+        sleep(1.f);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [TYTumblrHUD showHUDAddedTo:self.view animated:YES];
+        });
+        
     });
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 @end
