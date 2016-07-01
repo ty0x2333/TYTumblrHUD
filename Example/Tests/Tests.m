@@ -8,37 +8,33 @@
 
 // https://github.com/kiwi-bdd/Kiwi
 
+#import "TYTumblrHUD.h"
+
 SPEC_BEGIN(InitialTests)
 
-describe(@"My initial tests", ^{
-
-  context(@"will fail", ^{
-
-      it(@"can do maths", ^{
-          [[@1 should] equal:@2];
-      });
-
-      it(@"can read", ^{
-          [[@"number" should] equal:@"string"];
-      });
+describe(@"TYTumblrHUD", ^{
     
-      it(@"will wait and fail", ^{
-          NSObject *object = [[NSObject alloc] init];
-          [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
-      });
-  });
-
-  context(@"will pass", ^{
-    
-      it(@"can do maths", ^{
-        [[@1 should] beLessThan:@23];
-      });
-    
-      it(@"can read", ^{
-          [[@"team" shouldNot] containString:@"I"];
-      });  
-  });
-  
+    context(@"in life cycle", ^{
+        UIViewController *viewController = UIApplication.sharedApplication.keyWindow.rootViewController;
+        UIView *view = viewController.view;
+        
+        TYTumblrHUD *hud = [TYTumblrHUD showHUDAddedTo:view animated:NO];
+        it(@"should be created", ^{
+            [[hud shouldNot] beNil];
+        });
+        
+        it(@"should be visible", ^{
+            [[theValue([view.subviews containsObject:hud]) should] beYes];
+        });
+        
+        it(@"should be found via the convenience operation.", ^{
+            [[[TYTumblrHUD HUDForView:view] should] equal:hud];
+        });
+        
+        it(@"should be found and removed.", ^{
+            [[theValue([TYTumblrHUD hideHUDForView:view animated:NO]) should] beYes];
+        });
+    });
 });
 
 SPEC_END
