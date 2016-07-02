@@ -6,7 +6,7 @@ __ __| \ \   / __ __|                  |      |        |   |  |   |  __ \
 
 ```
 
-[![CI Status](https://travis-ci.com/luckytianyiyan/TYTumblrHUD.svg?token=KxwDz7Dpc3VEyK4zS63h)](https://travis-ci.com/luckytianyiyan/TYTumblrHUD)
+[![CI Status](https://img.shields.io/travis/luckytianyiyan/TYTumblrHUD.svg?maxAge=2592000)](https://travis-ci.org/luckytianyiyan/TYTumblrHUD)
 [![Version](https://img.shields.io/cocoapods/v/TYTumblrHUD.svg?style=flat)](http://cocoapods.org/pods/TYTumblrHUD)
 [![License](https://img.shields.io/cocoapods/l/TYTumblrHUD.svg?style=flat)](http://cocoapods.org/pods/TYTumblrHUD)
 [![Platform](https://img.shields.io/cocoapods/p/TYTumblrHUD.svg?style=flat)](http://cocoapods.org/pods/TYTumblrHUD)
