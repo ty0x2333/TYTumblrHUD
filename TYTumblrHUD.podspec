@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TYTumblrHUD'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Progress HUD like Tumblr.'
 
 # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |s|
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'luckytianyiyan' => 'luckytianyiyan@gmail.com' }
   s.source           = { :git => 'https://github.com/luckytianyiyan/TYTumblrHUD.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/luckytianyiyan'
 
   s.ios.deployment_target = '7.0'
 
@@ -37,6 +37,6 @@ Pod::Spec.new do |s|
   # }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
-  s.frameworks = 'UIKit'
+  # s.frameworks = 'UIKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end
