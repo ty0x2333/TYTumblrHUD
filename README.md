@@ -30,6 +30,20 @@ it, simply add the following line to your Podfile:
 pod "TYTumblrHUD"
 ```
 
+Usage
+---
+```objective-c
+TYTumblrHUD *hud = [TYTumblrHUD showHUDAddedTo:self.view animated:YES];
+
+dispatch_async(dispatch_get_global_queue(QOS_CLASS_USER_INITIATED, 0), ^{
+    // do something ...
+
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [hud hideAnimated:YES];
+    });
+});
+```
+
 License
 ---
 
