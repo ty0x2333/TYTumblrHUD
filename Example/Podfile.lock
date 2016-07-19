@@ -1,6 +1,6 @@
 PODS:
   - Kiwi (2.4.0)
-  - TYTumblrHUD (0.1.0)
+  - TYTumblrHUD (0.2.0)
 
 DEPENDENCIES:
   - Kiwi
@@ -12,7 +12,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
-  TYTumblrHUD: fea9251f7dc31a5277229034553dcb021c1d7c37
+  TYTumblrHUD: fe476e0da1dd2e9a8efa3ffbfb8dda49566436bf
 
 PODFILE CHECKSUM: edcb7283e0a17238d71b8f9d92edbba1cfff2da0
 

@@ -50,6 +50,7 @@ static NSInteger const kSubLayerCount = 3;
 {
     self.backgroundColor = [UIColor clearColor];
     self.alpha = 0;
+    self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     
     NSMutableArray *subLayers = [NSMutableArray arrayWithCapacity:kSubLayerCount];
     CGFloat offsetDuration = (kSubLayerMaxDuration - kSubLayerMinDuration) / kSubLayerCount;
