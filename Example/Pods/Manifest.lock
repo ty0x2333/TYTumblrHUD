@@ -1,0 +1,19 @@
+PODS:
+  - Kiwi (2.4.0)
+  - TYTumblrHUD (0.2.1)
+
+DEPENDENCIES:
+  - Kiwi
+  - TYTumblrHUD (from `../`)
+
+EXTERNAL SOURCES:
+  TYTumblrHUD:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
+  TYTumblrHUD: 76ce8eae297b25a6ed40cabd1ef3f6d745dea650
+
+PODFILE CHECKSUM: 3f058aef999748e4735dec9f0aa8fdd5e90274d9
+
+COCOAPODS: 1.1.1
