@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121FD6BF5302C722FCCE0126 /* Pods_TYTumblrHUD_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76881CDA060E4A405618D31C /* Pods_TYTumblrHUD_Tests.framework */; };
 		193936661D202BB300379078 /* TYAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 193936611D202BB300379078 /* TYAppDelegate.m */; };
 		193936671D202BB300379078 /* TYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 193936631D202BB300379078 /* TYViewController.m */; };
 		193936681D202BB300379078 /* UIColor+TYTheme.m in Sources */ = {isa = PBXBuildFile; fileRef = 193936651D202BB300379078 /* UIColor+TYTheme.m */; };
 		1939366A1D202BCC00379078 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 193936691D202BCC00379078 /* LaunchScreen.storyboard */; };
-		34477DCEF3F0D5867CF98C50 /* libPods-TYTumblrHUD_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D3D47EC55F335055F5579FFE /* libPods-TYTumblrHUD_Tests.a */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -23,7 +23,7 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
-		88D1A34D97D17D94EF4EA61B /* libPods-TYTumblrHUD_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B61016F46E19BE970DA66D /* libPods-TYTumblrHUD_Example.a */; };
+		9F06C3871BF74B79DA2F2896 /* Pods_TYTumblrHUD_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D366240AB46B2E1358EC0E9 /* Pods_TYTumblrHUD_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,11 +63,11 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		76881CDA060E4A405618D31C /* Pods_TYTumblrHUD_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TYTumblrHUD_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8578A0367C40A3B83F5070AE /* Pods-TYTumblrHUD_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYTumblrHUD_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TYTumblrHUD_Tests/Pods-TYTumblrHUD_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		8D366240AB46B2E1358EC0E9 /* Pods_TYTumblrHUD_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TYTumblrHUD_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		935457CCDFE4027483599F5E /* Pods-TYTumblrHUD_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TYTumblrHUD_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TYTumblrHUD_Example/Pods-TYTumblrHUD_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		D3D47EC55F335055F5579FFE /* libPods-TYTumblrHUD_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TYTumblrHUD_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F72EC1DAC060538B7364FE7D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		F7B61016F46E19BE970DA66D /* libPods-TYTumblrHUD_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TYTumblrHUD_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				88D1A34D97D17D94EF4EA61B /* libPods-TYTumblrHUD_Example.a in Frameworks */,
+				9F06C3871BF74B79DA2F2896 /* Pods_TYTumblrHUD_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,7 +89,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				34477DCEF3F0D5867CF98C50 /* libPods-TYTumblrHUD_Tests.a in Frameworks */,
+				121FD6BF5302C722FCCE0126 /* Pods_TYTumblrHUD_Tests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +135,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				F7B61016F46E19BE970DA66D /* libPods-TYTumblrHUD_Example.a */,
-				D3D47EC55F335055F5579FFE /* libPods-TYTumblrHUD_Tests.a */,
+				8D366240AB46B2E1358EC0E9 /* Pods_TYTumblrHUD_Example.framework */,
+				76881CDA060E4A405618D31C /* Pods_TYTumblrHUD_Tests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -340,7 +340,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		9EEDC2F60B85A38F31C4CD71 /* [CP] Embed Pods Frameworks */ = {
@@ -370,7 +370,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F5C93CA6C1573F7E4795F22C /* [CP] Copy Pods Resources */ = {

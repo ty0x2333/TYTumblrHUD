@@ -1,0 +1,6 @@
+framework module TYTumblrHUD {
+  umbrella header "TYTumblrHUD-umbrella.h"
+
+  export *
+  module * { export * }
+}
