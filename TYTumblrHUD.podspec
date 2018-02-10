@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TYTumblrHUD'
-  s.version          = '0.2.3'
+  s.version          = '0.3.0'
   s.summary          = 'Progress HUD like Tumblr.'
 
 # This description is used to generate tags and improve search results.
