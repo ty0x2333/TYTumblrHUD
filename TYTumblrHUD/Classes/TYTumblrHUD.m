@@ -8,7 +8,6 @@
 
 #import "TYTumblrHUD.h"
 
-#define TYTumblrBackgroundColor [UIColor colorWithRed:241 / 255.f green:242 / 255.f blue:243 / 255.f alpha:1.f]
 static CGFloat const kSubLayerWidth = 15.f;
 static CGFloat const kSubLayerHeight = 16.5f;
 static CGFloat const kSubLayerInterval = 5.f;
@@ -30,27 +29,26 @@ static NSInteger const kSubLayerCount = 3;
 
 @implementation TYTumblrHUD
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
         [self commonInit];
     }
     return self;
 }
 
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         [self commonInit];
     }
     return self;
 }
 
-- (void)commonInit
-{
+- (void)commonInit {
     self.backgroundColor = [UIColor clearColor];
     self.alpha = 0;
     self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    
+    _color = [UIColor colorWithRed:241 / 255.f green:242 / 255.f blue:243 / 255.f alpha:1.f];
     
     NSMutableArray *subLayers = [NSMutableArray arrayWithCapacity:kSubLayerCount];
     CGFloat offsetDuration = (kSubLayerMaxDuration - kSubLayerMinDuration) / kSubLayerCount;
@@ -58,7 +56,7 @@ static NSInteger const kSubLayerCount = 3;
     
     for (NSInteger i = 0; i < kSubLayerCount; ++i) {
         CALayer *subLayer = [[CALayer alloc] init];
-        subLayer.backgroundColor = TYTumblrBackgroundColor.CGColor;
+        subLayer.backgroundColor = _color.CGColor;
         subLayer.cornerRadius = kSubLayerCornerRadius;
         subLayer.opacity = kSubLayerAlpha;
         [self.layer addSublayer:subLayer];
@@ -97,7 +95,6 @@ static NSInteger const kSubLayerCount = 3;
 
         beginTimeOffset += animationDuration;
     }
-
 }
 
 - (void)layoutSubviews {
@@ -116,14 +113,12 @@ static NSInteger const kSubLayerCount = 3;
     return CGSizeMake(sumOfSubLayersWidth, kSubLayerHeight);
 }
 
-- (void)showAnimated:(BOOL)animated
-{
+- (void)showAnimated:(BOOL)animated {
     NSAssert([NSThread isMainThread], @"TYTumblrHUD needs to be accessed on the main thread.");
     [self p_animateIn:YES animated:animated completion:nil];
 }
 
-- (void)hideAnimated:(BOOL)animated
-{
+- (void)hideAnimated:(BOOL)animated {
     NSAssert([NSThread isMainThread], @"TYTumblrHUD needs to be accessed on the main thread.");
     [self p_animateIn:NO animated:animated completion:^(BOOL finished) {
         if (_removeFromSuperViewOnHide) {
@@ -132,10 +127,16 @@ static NSInteger const kSubLayerCount = 3;
     }];
 }
 
+- (void)setColor:(UIColor *)color {
+    _color = color;
+    for (CALayer *layer in _subLayers) {
+        layer.backgroundColor = _color.CGColor;
+    }
+}
+
 #pragma mark - Class Methods
 
-+ (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated
-{
++ (instancetype)showHUDAddedTo:(UIView *)view animated:(BOOL)animated {
     TYTumblrHUD *hud = [[self alloc] initWithFrame:view.bounds];
     hud.removeFromSuperViewOnHide = YES;
     [view addSubview:hud];
@@ -143,8 +144,7 @@ static NSInteger const kSubLayerCount = 3;
     return hud;
 }
 
-+ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated
-{
++ (BOOL)hideHUDForView:(UIView *)view animated:(BOOL)animated {
     TYTumblrHUD *hud = [self HUDForView:view];
     if (hud != nil) {
         hud.removeFromSuperViewOnHide = YES;
@@ -154,8 +154,7 @@ static NSInteger const kSubLayerCount = 3;
     return NO;
 }
 
-+ (TYTumblrHUD *)HUDForView:(UIView *)view
-{
++ (TYTumblrHUD *)HUDForView:(UIView *)view {
     NSEnumerator *subviewsEnum = [view.subviews reverseObjectEnumerator];
     for (UIView *subview in subviewsEnum) {
         if ([subview isKindOfClass:self]) {
@@ -167,8 +166,7 @@ static NSInteger const kSubLayerCount = 3;
 
 #pragma mark - Helper
 
-- (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated completion:(void(^)(BOOL finished))completion
-{
+- (void)p_animateIn:(BOOL)animatingIn animated:(BOOL)animated completion:(void(^)(BOOL finished))completion {
     if (animated) {
         [UIView animateWithDuration:kHUDAnimationDuration animations:^{
             self.alpha = animatingIn ? 1.f : 0;
